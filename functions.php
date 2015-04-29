@@ -45,3 +45,9 @@ function from_scratch_theme_setup() {
 	add_theme_support( 'html5', array( 'comment-list', 'comment-form', 'search-form', 'gallery', 'caption' ) );
 }
 add_action( 'after_setup_theme', 'from_scratch_theme_setup' );
+
+add_filter( 'post_class', 'from_scratch_post_class' );
+function from_scratch_post_class( $classes ) {
+	$classes[] = 'content-entity';
+	return $classes;
+}
