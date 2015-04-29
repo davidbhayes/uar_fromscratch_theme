@@ -24,4 +24,7 @@ function from_scratch_widgets_init() {
     ) );
 }
 
-
+add_action( 'after_setup_theme', 'from_scratch_register_my_menu' );
+function from_scratch_register_my_menu() {
+  register_nav_menu( 'primary', 'Primary Navigation' );
+}

@@ -8,6 +8,7 @@
 			<div id="content" class="site-content">
 				<header class="site-header">
 					<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+					<?php wp_nav_menu(array('theme_location' => 'primary')); ?>
 				</header>
 				<main class="site-main">
 					<?php
@@ -41,10 +42,10 @@
 					?>
 				</main>
 			</div>
+			<aside class="sidebar">
+				<?php dynamic_sidebar( 'sidebar' ); ?>
+			</aside>
 		</div>
-		<aside class="sidebar">
-			<?php dynamic_sidebar( 'sidebar' ); ?>
-		</aside>
 		<footer class="site-footer">
 			<p>Made pretty by the FromScratch Theme</p>
 			<p>Proudly powered by <a href="http://www.wordpress.org/">WordPress</a></p>
