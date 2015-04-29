@@ -21,8 +21,13 @@ body {
 	text-decoration: none;
 }
 
+.site-main {
+	float: left;
+	width: 66%;
+}
+
 .post {
-	width: 64%;
+	width: 100%;
 	background-color: #eef;
 	padding: 1em;
 	margin: 1em;
@@ -39,6 +44,7 @@ body {
 }
 
 .site-footer {
+	clear: both;
 	background-color: royalblue;
 	color:  #fff;
 	margin: 0;
@@ -48,4 +54,18 @@ body {
 
 .site-footer p {
 	margin: .2em;
+}
+
+.sidebar {
+	width: 23%;
+	padding-right: 4%;
+	float: right;
+}
+
+.sidebar .widget {
+	list-style-type: none;
+}
+
+.sidebar .widget ul {
+	padding-left: 1em;
 }
