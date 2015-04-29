@@ -8,7 +8,7 @@
 			<div id="content" class="site-content">
 				<header class="site-header">
 					<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-					<?php wp_nav_menu(array('theme_location' => 'primary')); ?>
+					<?php from_scratch_primary_menu(); ?>
 				</header>
 				<main class="site-main">
 					<?php

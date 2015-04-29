@@ -28,3 +28,14 @@ add_action( 'after_setup_theme', 'from_scratch_register_my_menu' );
 function from_scratch_register_my_menu() {
   register_nav_menu( 'primary', 'Primary Navigation' );
 }
+
+
+function from_scratch_primary_menu() {
+	wp_nav_menu(
+		array(
+			'theme_location' => 'primary',
+			'menu_class'      => 'primary-menu',
+			'container_class' => 'primary-menu-container',
+		)
+	);
+}
