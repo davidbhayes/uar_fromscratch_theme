@@ -2,7 +2,7 @@
 	<head>
 		<?php wp_head(); ?>
 	</head>
-	<body>
+	<body <?php body_class(); ?>>
 		<div class="site container">
 			<div id="content" class="site-content">
 				<main class="site-main">
@@ -10,7 +10,7 @@
 					if (have_posts()):
 						while(have_posts()):
 							the_post(); ?>
-						<section>
+						<section <?php post_class(); ?>>
 							<header>
 								<h2><?php the_title(); ?></h2>
 								<p class="byline">
