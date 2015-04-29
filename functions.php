@@ -34,6 +34,10 @@ add_action( 'after_setup_theme', 'from_scratch_theme_setup' );
 function from_scratch_theme_setup() {
 	add_theme_support( 'title-tag' );
 	add_theme_support( 'html5', array( 'comment-list', 'comment-form', 'search-form', 'gallery', 'caption' ) );
+	add_theme_support( 'post-thumbnails' );
+
+	set_post_thumbnail_size( 150, 150 );
+
 }
 
 

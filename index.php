@@ -6,6 +6,9 @@
 			the_post(); ?>
 		<section <?php post_class(); ?>>
 			<header>
+				<div class="post-image">
+					<?php the_post_thumbnail(); ?>
+				</div>
 				<a href="<?php the_permalink(); ?>">
 					<h2 class="post-title"><?php the_title(); ?></h2>
 				</a>

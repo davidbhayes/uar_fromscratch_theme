@@ -57,6 +57,11 @@ body {
 	margin: 0;
 }
 
+.post-image {
+	float: right;
+	clear: none;
+}
+
 .byline {
 	margin-top: 0;
 	color: #667;
