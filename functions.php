@@ -30,24 +30,17 @@ function from_scratch_register_my_menu() {
 }
 
 
-function from_scratch_primary_menu() {
-	wp_nav_menu(
-		array(
-			'theme_location' => 'primary',
-			'menu_class'      => 'primary-menu',
-			'container_class' => 'primary-menu-container',
-		)
-	);
-}
-
+add_action( 'after_setup_theme', 'from_scratch_theme_setup' );
 function from_scratch_theme_setup() {
 	add_theme_support( 'title-tag' );
 	add_theme_support( 'html5', array( 'comment-list', 'comment-form', 'search-form', 'gallery', 'caption' ) );
 }
-add_action( 'after_setup_theme', 'from_scratch_theme_setup' );
+
 
 add_filter( 'post_class', 'from_scratch_post_class' );
 function from_scratch_post_class( $classes ) {
 	$classes[] = 'content-entity';
 	return $classes;
 }
+
+require get_template_directory() . '/inc/template-tags.php';
