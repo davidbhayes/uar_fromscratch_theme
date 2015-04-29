@@ -4,6 +4,48 @@ Author: David Hayes
 Theme URI: http://wpshout.com
  */
 
-h2 {
-	color: orange;
+body {
+	margin: 0;
+	padding: 0;
+}
+
+.site-header {
+	margin: 0;
+	padding: 1em;
+	background-color: royalblue;
+	color:  #fff;
+}
+
+.site-title a {
+	color: white;
+	text-decoration: none;
+}
+
+.post {
+	width: 64%;
+	background-color: #eef;
+	padding: 1em;
+	margin: 1em;
+}
+
+.post-title {
+	color: royalblue;
+	margin: 0;
+}
+
+.byline {
+	margin-top: 0;
+	color: #667;
+}
+
+.site-footer {
+	background-color: royalblue;
+	color:  #fff;
+	margin: 0;
+	text-align: center;
+	padding: 1em;
+}
+
+.site-footer p {
+	margin: .2em;
 }
