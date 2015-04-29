@@ -11,3 +11,17 @@ function from_scratch_scripts() {
     wp_enqueue_style( 'style', get_stylesheet_uri() );
 }
 
+add_action( 'widgets_init', 'from_scratch_widgets_init' );
+function from_scratch_widgets_init() {
+    register_sidebar( array(
+        'name' => __( 'Main Sidebar', 'from-scratch' ),
+        'id' => 'sidebar',
+        'description' => __( 'Widgets in this area will be shown on all posts and pages.', 'from-scratch' ),
+        'before_widget' => '<li id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</li>',
+		'before_title'  => '<h3 class="widgettitle">',
+		'after_title'   => '</h3>',
+    ) );
+}
+
+

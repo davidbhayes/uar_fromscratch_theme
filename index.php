@@ -42,6 +42,9 @@
 				</main>
 			</div>
 		</div>
+		<aside class="sidebar">
+			<?php dynamic_sidebar( 'sidebar' ); ?>
+		</aside>
 		<footer class="site-footer">
 			<p>Made pretty by the FromScratch Theme</p>
 			<p>Proudly powered by <a href="http://www.wordpress.org/">WordPress</a></p>
