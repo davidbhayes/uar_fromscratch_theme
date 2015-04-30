@@ -7,7 +7,7 @@
 				if ( is_single() ) {
 					get_template_part( 'content', 'single' );
 				} else {
-					get_template_part( 'content', 'entity' );
+					get_template_part( 'content', 'loop' );
 				}
 		endwhile; ?>
 		<div class="posts-nav">
