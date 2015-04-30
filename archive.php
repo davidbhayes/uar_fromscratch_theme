@@ -1,8 +1,10 @@
 <?php get_header(); ?>
 <main class="site-main">
+	
 	<?php
-	if ( have_posts() ):
-		while ( have_posts() ):
+	the_archive_title('<h3>', '</h3>');
+	if (have_posts()):
+		while (have_posts()):
 			the_post(); 
 				if ( is_single() ) {
 					get_template_part( 'content', 'single' );
@@ -11,9 +13,9 @@
 				}
 		endwhile; ?>
 		<div class="posts-nav">
-			<?php next_posts_link( 'older' ); ?>
+			<?php next_posts_link('older'); ?>
 			&nbsp;
-			<?php previous_posts_link( 'newer' ); ?>
+			<?php previous_posts_link('newer'); ?>
 		</div>
 	<?php else: ?>
 		<section>
