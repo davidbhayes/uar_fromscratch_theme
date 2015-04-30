@@ -37,6 +37,7 @@ function from_scratch_theme_setup() {
 	add_theme_support( 'post-thumbnails' );
 
 	set_post_thumbnail_size( 150, 150 );
+	add_image_size( 'better-thumb', 150, 150, true ); // (cropped)
 
 }
 

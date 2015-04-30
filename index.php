@@ -7,7 +7,7 @@
 		<section <?php post_class(); ?>>
 			<header>
 				<div class="post-image">
-					<?php the_post_thumbnail(); ?>
+					<?php the_post_thumbnail( 'better-thumb' ); ?>
 				</div>
 				<a href="<?php the_permalink(); ?>">
 					<h2 class="post-title"><?php the_title(); ?></h2>
