@@ -2,10 +2,14 @@
 <main class="site-main">
 	<?php
 	if (have_posts()):
-		while(have_posts()):
+		while (have_posts()):
 			the_post(); 
-				get_template_part( 'content', 'entity' );
-		endwhile ?>
+				if ( is_single() ) {
+					get_template_part( 'content', 'single' );
+				} else {
+					get_template_part( 'content', 'entity' );
+				}
+		endwhile; ?>
 		<div class="posts-nav">
 			<?php next_posts_link('older'); ?>
 			&nbsp;
