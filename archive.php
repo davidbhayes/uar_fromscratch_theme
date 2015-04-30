@@ -2,7 +2,7 @@
 <main class="site-main">
 	
 	<?php
-	the_archive_title('<h3>', '</h3>');
+	the_archive_title('<h3 class="archive-title">', '</h3>');
 	if (have_posts()):
 		while (have_posts()):
 			the_post(); 

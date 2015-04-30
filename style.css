@@ -45,6 +45,10 @@ body {
 	width: 66%;
 }
 
+.archive-title {
+	text-align: center;
+}
+
 .content-entity {
 	width: 100%;
 	background-color: #eef;
