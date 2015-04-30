@@ -15,3 +15,10 @@
 		<a href="<?php the_permalink(); ?>">&infin;</a>
 	</footer>
 </section>
+
+
+<?php 
+if ( comments_open() || get_comments_number() ) :
+	comments_template();
+endif;
+?>
