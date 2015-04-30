@@ -21,9 +21,13 @@
 				<a href="<?php the_permalink(); ?>">&infin;</a>
 			</footer>
 		</section>
-	<?php
-		endwhile;
-	else: ?>
+	<?php endwhile ?>
+		<div class="posts-nav">
+			<?php next_posts_link('older'); ?>
+			&nbsp;
+			<?php previous_posts_link('newer'); ?>
+		</div>
+	<?php else: ?>
 		<section>
 			<header>
 				<h1>404! Not found!</h1>
