@@ -20,18 +20,20 @@ Template Name: Archive Page
 <?php 
 			$q = new WP_Query(array(
 				'ignore_sticky_posts' => false,
-				'post_per_posts' => -1
+				'post_per_page' => -1
 			));
 			while ( $q->have_posts() ):
 				$q->the_post();
 				?>
-				<li><?php the_title(); ?></li>
+				<li>
+					<a href="<?php the_permalink(); ?>">
+					<?php the_title(); ?></a> &mdash;
+					<?php the_date(); ?>
+				</li>
 				<?php 
 			endwhile;
 			wp_reset_postdata();
 ?>
-
-				<li>Post Name</li>
 			</ul>
 		</section>
 </main>
