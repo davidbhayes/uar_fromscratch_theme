@@ -6,28 +6,19 @@ Template Name: Archive Page
 <?php get_header(); ?>
 <main class="site-main">
 	<?php
-	if ( have_posts() ):
-		while ( have_posts() ):
-			the_post(); 
-				if ( is_single() ) {
-					get_template_part( 'content', 'single' );
-				} else {
-					get_template_part( 'content', 'loop' );
-				}
-		endwhile; ?>
-		<div class="posts-nav">
-			<?php next_posts_link( 'older' ); ?>
-			&nbsp;
-			<?php previous_posts_link( 'newer' ); ?>
-		</div>
-	<?php else: ?>
-		<section>
+	while ( have_posts() ):
+		the_post(); ?>
+		<section <?php post_class(); ?>>
 			<header>
-				<h1>404! Not found!</h1>
+				<h2 class="post-title">Our Archives</h2>
 			</header>
+			<?php the_content(); ?>
+		
+	<?php
+	endwhile; ?>
+			<ul>
+				<li>Post Name</li>
+			</ul>
 		</section>
-	<?php 
-	endif;
-	?>
 </main>
 <?php get_footer(); ?>
