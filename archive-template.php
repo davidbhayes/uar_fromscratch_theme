@@ -17,6 +17,20 @@ Template Name: Archive Page
 	<?php
 	endwhile; ?>
 			<ul>
+<?php 
+			$q = new WP_Query(array(
+				'ignore_sticky_posts' => false,
+				'post_per_posts' => -1
+			));
+			while ( $q->have_posts() ):
+				$q->the_post();
+				?>
+				<li><?php the_title(); ?></li>
+				<?php 
+			endwhile;
+			wp_reset_postdata();
+?>
+
 				<li>Post Name</li>
 			</ul>
 		</section>
